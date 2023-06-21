@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "hexlet_code"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 django = "^4.2.2"
 load-dotenv = "^0.1.0"
 
