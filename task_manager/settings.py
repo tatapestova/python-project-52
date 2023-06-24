@@ -27,7 +27,7 @@ DEBUG = os.getenv('DEBUG')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['127.0.0.1', 'webserver',]
+ALLOWED_HOSTS = ['127.0.0.1', 'webserver', 'python-project-52-production-af4e.up.railway.app',]
 
 
 # Application definition
