@@ -13,3 +13,7 @@ trans:
 compile:
 
 		python manage.py compilemessages
+
+lint:
+
+		poetry run flake8 task_manager
