@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-19 19:58+0000\n"
+"POT-Creation-Date: 2023-07-24 16:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,52 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
+#: task_manager/statuses/models.py:6
+#: task_manager/templates/statuses/statuses_list.html:11
+msgid "Name"
+msgstr "Имя"
+
+#: task_manager/statuses/models.py:7
+#: task_manager/templates/statuses/statuses_list.html:12
+#: task_manager/templates/users/user_list.html:13
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: task_manager/statuses/views.py:17
+msgid "Status successfully created"
+msgstr "Статус успешно создан"
+
+#: task_manager/statuses/views.py:19
+#: task_manager/templates/statuses/statuses_list.html:6
+msgid "Create status"
+msgstr "Создать статус"
+
+#: task_manager/statuses/views.py:20
+msgid "Create"
+msgstr "Создать"
+
+#: task_manager/statuses/views.py:34
+msgid "Status successfully changed"
+msgstr "Статус успешно изменен"
+
+#: task_manager/statuses/views.py:36
+msgid "Change status"
+msgstr "Изменить"
+
+#: task_manager/statuses/views.py:37
+#: task_manager/templates/statuses/statuses_list.html:23
+#: task_manager/users/views.py:45
+msgid "Change"
+msgstr "Изменить"
+
+#: task_manager/statuses/views.py:46
+msgid "Status successfully deleted"
+msgstr "Статус успешно удален"
+
+#: task_manager/statuses/views.py:47
+msgid "It is not possible to delete a status because it is in use"
+msgstr "Невозможно удалить статус, потому что он используется"
+
 #: task_manager/templates/base.html:8 task_manager/templates/base.html:15
 msgid "Task Manager"
 msgstr "Менеджер задач"
@@ -30,8 +76,9 @@ msgid "Users"
 msgstr "Пользователи"
 
 #: task_manager/templates/base.html:23
+#: task_manager/templates/statuses/statuses_list.html:5
 msgid "Statuses"
-msgstr "Статус"
+msgstr "Статусы"
 
 #: task_manager/templates/base.html:26
 msgid "Labels"
@@ -73,17 +120,28 @@ msgstr "Вход"
 msgid "Log in"
 msgstr "Вход"
 
-#: task_manager/templates/users/delete.html:5
-msgid "Deletion user"
-msgstr "Удаление пользователя"
+#: task_manager/templates/statuses/delete.html:5
+msgid "Deletion status"
+msgstr "Удаление статуса"
 
+#: task_manager/templates/statuses/delete.html:6
 #: task_manager/templates/users/delete.html:6
 msgid "Are you sure you want to delete"
 msgstr "Вы уверены, что хотите удалить"
 
+#: task_manager/templates/statuses/delete.html:9
 #: task_manager/templates/users/delete.html:9
 msgid "Yes, delete"
 msgstr "Да, удалить"
+
+#: task_manager/templates/statuses/statuses_list.html:25
+#: task_manager/templates/users/user_list.html:26
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/templates/users/delete.html:5
+msgid "Deletion user"
+msgstr "Удаление пользователя"
 
 #: task_manager/templates/users/user_list.html:11
 msgid "User name"
@@ -93,17 +151,9 @@ msgstr "Имя пользователя"
 msgid "Full name"
 msgstr "Полное имя"
 
-#: task_manager/templates/users/user_list.html:13
-msgid "Creation date"
-msgstr "Дата создания"
-
 #: task_manager/templates/users/user_list.html:24
 msgid "Edit"
 msgstr "Изменить"
-
-#: task_manager/templates/users/user_list.html:26
-msgid "Delete"
-msgstr "Удалить"
 
 #: task_manager/users/mixins.py:10
 msgid "You are not logged in! Please log in."
@@ -128,10 +178,6 @@ msgstr "У вас нет прав для изменения другого по�
 #: task_manager/users/views.py:44
 msgid "User modification"
 msgstr "Изменение пользователя"
-
-#: task_manager/users/views.py:45
-msgid "Change"
-msgstr "Изменить"
 
 #: task_manager/users/views.py:56
 msgid "User succesfully deleted"
