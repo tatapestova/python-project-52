@@ -29,7 +29,7 @@ class CreateUserView(SuccessMessageMixin,
                      'register': _('To create')}
 
 
-class UpdateUserView(AuthRequiredMixin, 
+class UpdateUserView(AuthRequiredMixin,
                      SuccessMessageMixin,
                      UserPermissionMixin,
                      UpdateView):
@@ -52,9 +52,11 @@ class DeleteUserView(AuthRequiredMixin,
                      DeleteView):
     login_url = '/login/'
     permission_url = 'user_list'
+    protected_url = 'user_list'
     model = get_user_model()
     success_message = _('User succesfully deleted')
-    permission_message = _('User cannot be deleted because it is in use')
+    protected_message = _('User cannot be deleted because it is in use')
+    permission_message = _('You have no rights to change another user.')
     success_url = reverse_lazy('user_list')
     template_name = 'users/delete.html'
     context_object_name = 'user'

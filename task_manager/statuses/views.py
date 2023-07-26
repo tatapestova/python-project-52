@@ -7,9 +7,7 @@ from task_manager.users.mixins import AuthRequiredMixin, DeleteProtectionMixin
 from django.views.generic import CreateView, ListView, UpdateView, DeleteView
 
 
-
 class StatusCreateView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
-
     template_name = 'statuses/create.html'
     model = Statuses
     form_class = StatusForm

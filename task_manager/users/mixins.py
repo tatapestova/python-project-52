@@ -38,4 +38,3 @@ class UserPermissionMixin(UserPassesTestMixin):
     def handle_no_permission(self):
         messages.error(self.request, self.permission_message)
         return redirect(self.permission_url)
-        
