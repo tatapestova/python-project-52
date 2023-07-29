@@ -8,5 +8,6 @@ class TaskForm(ModelForm):
         fields = ['name',
                   'description',
                   'status',
-                  'executor'
+                  'executor',
+                  'labels'
                   ]

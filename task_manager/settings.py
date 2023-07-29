@@ -27,7 +27,11 @@ DEBUG = os.getenv('DEBUG')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-ALLOWED_HOSTS = ['127.0.0.1', 'webserver', 'python-project-52-production-af4e.up.railway.app',]
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'webserver',
+    'python-project-52-production-af4e.up.railway.app',
+]
 
 
 # Application definition
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
     'task_manager.users',
     'task_manager.statuses',
     'task_manager.tasks',
+    'task_manager.labels',
     'bootstrap4',
 ]
 
@@ -137,7 +142,7 @@ BACKEND = 'django.template.backends.django.DjangoTemplates'
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
-    ]
+]
 
 ALLOWED_INCLUDE_ROOTS = [
     'django.template.context_processors.i18n',

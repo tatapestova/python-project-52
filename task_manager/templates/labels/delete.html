@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+    <h1 class="my-4">{% trans "Deletion label" %}</h1>
+    <p>{% trans "Are you sure you want to delete" %} {{ labels.name }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="{% trans 'Yes, delete' %}">
+ </form>
+{% endblock %}
