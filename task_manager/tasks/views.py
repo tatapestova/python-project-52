@@ -1,4 +1,5 @@
 from django.urls import reverse_lazy
+from task_manager.tasks.filter import TaskFilter
 from task_manager.tasks.forms import TaskForm
 from task_manager.tasks.models import Tasks
 from task_manager.users.models import User
@@ -8,11 +9,11 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib import messages
 from django.shortcuts import redirect
 from django.views.generic import (CreateView,
-                                  ListView,
                                   DetailView,
                                   UpdateView,
                                   DeleteView)
 from django.utils.translation import gettext as _
+from django_filters.views import FilterView
 
 
 class TaskCreationView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
@@ -31,9 +32,10 @@ class TaskCreationView(AuthRequiredMixin, SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-class TasksListView(AuthRequiredMixin, ListView):
+class TasksListView(AuthRequiredMixin, FilterView):
     template_name = 'tasks/tasks_list.html'
     model = Tasks
+    filterset_class = TaskFilter
 
 
 class TaskDetailView(AuthRequiredMixin, DetailView):
