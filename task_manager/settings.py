@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
 
 ROOT_URLCONF = 'task_manager.urls'
@@ -99,19 +100,21 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    #     'NAME': 'django.contrib.auth.password_validation.'
+    #             'UserAttributeSimilarityValidator',
     # },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS': {
-            'min_length': 3,
-        }
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
+        'OPTIONS': {'min_length': 3, }
     },
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    #     'NAME': 'django.contrib.auth.password_validation.'
+    #             'CommonPasswordValidator',
     # },
     # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    #     'NAME': 'django.contrib.auth.password_validation.'
+    #             'NumericPasswordValidator',
     # },
 ]
 
@@ -147,3 +150,10 @@ LOCALE_PATHS = [
 ALLOWED_INCLUDE_ROOTS = [
     'django.template.context_processors.i18n',
 ]
+
+ROLLBAR = {
+    'access_token': 'a68c67c07309493b96b2ee6074a66c5d',
+    'environment': 'development' if DEBUG else 'production',
+    'code_version': '1.0',
+    'root': BASE_DIR,
+}

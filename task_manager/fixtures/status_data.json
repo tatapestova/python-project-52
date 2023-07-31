@@ -1,0 +1,13 @@
+{
+  "create": {
+    "valid": {
+      "name": "Failed"
+    },
+    "exists": {
+      "name": "Testing"
+    }
+  },
+  "update": {
+    "name": "Almost-Finished"
+  }
+}

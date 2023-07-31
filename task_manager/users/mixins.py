@@ -1,3 +1,5 @@
+import json
+import os
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
@@ -38,3 +40,8 @@ class UserPermissionMixin(UserPassesTestMixin):
     def handle_no_permission(self):
         messages.error(self.request, self.permission_message)
         return redirect(self.permission_url)
+
+
+def load_data(path):
+    with open(os.path.abspath(f'task_manager/fixtures/{path}'), 'r') as file:
+        return json.loads(file.read())

@@ -1,0 +1,57 @@
+[
+  {
+      "model": "users.user",
+      "pk": 4,
+      "fields": {
+          "password": "Hedwig!",
+          "last_login": null,
+          "is_superuser": false,
+          "username": "Harry",
+          "first_name": "Harry",
+          "last_name": "Potter",
+          "email": "",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-06-25T10:04:04Z",
+          "groups": [],
+          "user_permissions": []
+      }
+  },
+  {
+      "model": "users.user",
+      "pk": 6,
+      "fields": {
+          "password": "Scabbers!",
+          "last_login": "2023-07-25T16:39:42Z",
+          "is_superuser": false,
+          "username": "Ron",
+          "first_name": "Ron",
+          "last_name": "Weasley",
+          "email": "",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-07-19T19:29:05Z",
+          "groups": [],
+          "user_permissions": []
+      }
+  },
+  {
+      "model": "users.user",
+      "pk": 7,
+      "fields": {
+          "password": "Crookshanks!",
+          "last_login": "2023-07-25T18:04:29Z",
+          "is_superuser": false,
+          "username": "Hermione",
+          "first_name": "Hermione",
+          "last_name": "Granger",
+          "email": "",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-07-25T18:04:22Z",
+          "groups": [],
+          "user_permissions": []
+      }
+  }
+  ]
+  

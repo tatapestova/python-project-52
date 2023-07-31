@@ -1,0 +1,46 @@
+{
+    "create": {
+      "valid": {
+        "username": "HelloWorld",
+        "first_name": "Hello",
+        "last_name": "World",
+        "password1": "123456",
+        "password2": "123456"
+      },
+      "invalid": {
+        "username": "HelloWorld!",
+        "first_name": "Hello",
+        "last_name": "World",
+        "password1": "123456",
+        "password2": "123456"
+      },
+      "exists": {
+        "username": "Harry",
+        "first_name": "Harry",
+        "last_name": "Potter",
+        "password1": "123456",
+        "password2": "123456"
+      },
+      "pass_not_match": {
+        "username": "HelloWorld",
+        "first_name": "Hello",
+        "last_name": "World",
+        "password1": "12345",
+        "password2": "123456"
+      },
+      "pass_too_short": {
+        "username": "HelloWorld",
+        "first_name": "Hello",
+        "last_name": "World",
+        "password1": "p",
+        "password2": "p"
+      }
+    },
+    "update": {
+      "username": "HiWorld",
+      "first_name": "Hi",
+      "last_name": "World",
+      "password1": "password",
+      "password2": "password"
+    }
+  }

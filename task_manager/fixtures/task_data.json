@@ -1,0 +1,22 @@
+{
+    "create": {
+      "valid": {
+        "name": "Task4",
+        "description": "Description4",
+        "executor": 6,
+        "status": 1
+      },
+      "exists": {
+        "name": "Task1",
+        "description": "Description2",
+        "executor": 7,
+        "status": 1
+      }
+    },
+    "update": {
+        "name": "UpdateTask",
+        "description": "Description5",
+        "executor": 4,
+        "status": 4
+      }
+  }

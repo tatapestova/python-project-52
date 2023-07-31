@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-29 15:19+0000\n"
+"POT-Creation-Date: 2023-07-31 17:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: task_manager/labels/models.py:10 task_manager/statuses/models.py:7
-#: task_manager/tasks/models.py:9
+#: task_manager/tasks/models.py:12
 #: task_manager/templates/labels/labels_list.html:11
 #: task_manager/templates/statuses/statuses_list.html:11
 #: task_manager/templates/tasks/tasks_list.html:19
@@ -36,6 +36,10 @@ msgstr "Имя"
 #: task_manager/templates/users/user_list.html:13
 msgid "Creation date"
 msgstr "Дата создания"
+
+#: task_manager/labels/tests.py:55
+msgid "Label with this Name already exists."
+msgstr "Labels с таким Имя уже существует."
 
 #: task_manager/labels/views.py:20
 msgid "Label successfully created"
@@ -76,6 +80,10 @@ msgstr "Метка успешно удалена"
 msgid "It is not possible to delete a label because it is in use"
 msgstr "Невозможно удалить метку, потому что она используется"
 
+#: task_manager/statuses/tests.py:55
+msgid "Statuses with this Name already exists."
+msgstr "Statuses с таким Имя уже существует."
+
 #: task_manager/statuses/views.py:15
 msgid "Status successfully created"
 msgstr "Статус успешно создан"
@@ -109,32 +117,36 @@ msgstr "Метка"
 msgid "Only personal tasks"
 msgstr "Только свои задачи"
 
-#: task_manager/tasks/models.py:12
+#: task_manager/tasks/models.py:15
 #: task_manager/templates/tasks/task_detail.html:15
 #: task_manager/templates/tasks/tasks_list.html:21
 msgid "Author"
 msgstr "Автор"
 
-#: task_manager/tasks/models.py:16
+#: task_manager/tasks/models.py:19
 msgid "Description"
 msgstr "Описание"
 
-#: task_manager/tasks/models.py:18
+#: task_manager/tasks/models.py:21
 #: task_manager/templates/tasks/task_detail.html:23
 #: task_manager/templates/tasks/tasks_list.html:20
 msgid "Status"
 msgstr "Статус"
 
-#: task_manager/tasks/models.py:23
+#: task_manager/tasks/models.py:26
 #: task_manager/templates/tasks/tasks_list.html:22
 msgid "Executor"
 msgstr "Исполнитель"
 
-#: task_manager/tasks/models.py:24 task_manager/templates/base.html:26
+#: task_manager/tasks/models.py:27 task_manager/templates/base.html:26
 #: task_manager/templates/labels/labels_list.html:5
 #: task_manager/templates/tasks/task_detail.html:32
 msgid "Labels"
 msgstr "Метки"
+
+#: task_manager/tasks/tests.py:71
+msgid "Task with this Name already exists."
+msgstr "Tasks с таким Имя уже существует."
 
 #: task_manager/tasks/views.py:22
 msgid "Task succesfully created"
@@ -176,11 +188,11 @@ msgstr "Пользователи"
 
 #: task_manager/templates/base.html:23
 #: task_manager/templates/statuses/statuses_list.html:5
-#: task_manager/templates/tasks/tasks_list.html:5
 msgid "Statuses"
 msgstr "Статусы"
 
 #: task_manager/templates/base.html:29
+#: task_manager/templates/tasks/tasks_list.html:5
 msgid "Tasks"
 msgstr "Задачи"
 
@@ -282,9 +294,30 @@ msgstr "Полное имя"
 msgid "Edit"
 msgstr "Изменить"
 
-#: task_manager/users/mixins.py:10
+#: task_manager/users/mixins.py:12
 msgid "You are not logged in! Please log in."
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/users/tests.py:44
+msgid ""
+"Enter a valid username. This value may contain only letters, numbers, and "
+"@/./+/-/_ characters."
+msgstr ""
+"Введите правильное имя пользователя. Оно может содержать только буквы, цифры "
+"и знаки @/./+/-/_."
+
+#: task_manager/users/tests.py:59
+msgid "A user with that username already exists."
+msgstr "Пользователь с таким именем уже существует."
+
+#: task_manager/users/tests.py:74
+msgid "The two password fields didn’t match."
+msgstr "Введенные пароли не совпадают."
+
+#: task_manager/users/tests.py:88
+msgid "This password is too short. It must contain at least 3 characters."
+msgstr ""
+"Введённый пароль слишком короткий. Он должен содержать как минимум 3 символа."
 
 #: task_manager/users/views.py:26
 msgid "User succesfully registered"

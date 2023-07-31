@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from django import forms
 from .models import Tasks
 
+
 class TaskFilter(FilterSet):
     labels = ModelChoiceFilter(
         queryset=Labels.objects.all(),

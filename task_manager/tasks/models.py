@@ -6,7 +6,10 @@ from task_manager.users.models import User
 
 
 class Tasks(models.Model):
-    name = models.CharField(max_length=150, verbose_name=_('Name'))
+    name = models.CharField(max_length=150,
+                            blank=False,
+                            unique=True,
+                            verbose_name=_('Name'))
     author = models.ForeignKey(User, on_delete=models.PROTECT,
                                related_name='author',
                                verbose_name=_('Author'))

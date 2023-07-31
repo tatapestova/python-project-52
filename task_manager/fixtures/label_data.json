@@ -1,0 +1,13 @@
+{
+    "create": {
+      "valid": {
+        "name": "Blog"
+      },
+      "exists": {
+        "name": "Study"
+      }
+    },
+    "update": {
+      "name": "Hobby"
+    }
+  }
